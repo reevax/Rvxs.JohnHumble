@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@theme {
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --color-primary: #d7b032;
+  --color-brand-green: #5cc677;
+  --color-dark-gray: #2c2c2c;
+  --color-medium-gray: #333333;
+  --color-light-gray: #222;
+}
+
+@source "hugo_stats.json";

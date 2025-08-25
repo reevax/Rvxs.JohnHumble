@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Humble Solicitor - Wills, Trusts and Probate</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/32486bfb33.js" crossorigin="anonymous"></script>
+
+    <!-- Tailwind CSS -->
+    {{ with (templates.Defer (dict "key" "global")) }}
+    {{ partial "css.html" . }}
+    {{ end }}
+</head>
+<body class="font-roboto text-black">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-gray h-20">
+        <div class="container mx-auto px-4 h-full flex items-center justify-between max-w-screen-xl">
+            <div class="flex items-center">
+                <img src="/img/logo.png" alt="John Humble Solicitor Logo" class="h-10 md:h-12 mr-3">
+                <div class="font-quicksand">
+                    <h1 class="text-white font-bold text-sm md:text-base leading-5">John Humble</h1>
+                    <h2 class="text-brand-green font-normal text-sm md:text-base leading-5">Solicitor</h2>
+                </div>
+            </div>
+            
+            <nav>
+                <a href="/" class="text-white hover:text-brand-green uppercase tracking-widest text-xs md:text-sm px-2 md:px-4 transition-colors duration-200">Home</a>
+                <a href="/articles" class="text-white hover:text-brand-green uppercase tracking-widest text-xs md:text-sm px-2 md:px-4 transition-colors duration-200">Articles</a>
+            </nav>
+        </div>
+    </header>
+
+    {{ block "main" . }}{{ end }}
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-medium-gray text-white">
+        <div class="py-16 lg:py-20">
+            <div class="container mx-auto px-4 max-w-screen-xl">
+                <header class="text-center mb-12">
+                    <h2 class="font-quicksand text-3xl lg:text-4xl mb-6">Contact Me</h2>
+                    <hr class="border-gray-500 mb-6 max-w-md mx-auto">
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <i class="fa fa-mobile fa-2x text-brand-green mb-4"></i>
+                        <p class="text-white font-semibold mb-2">Call / Text:</p>
+                        <p class="text-gray-300">07484 233 783</p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-map-marker fa-2x text-brand-green mb-4"></i>
+                        <p class="text-white font-semibold mb-2">Address:</p>
+                        <p class="text-gray-300">The Old Pottery, Dovecote Street, Staindrop, County Durham, DL2 3NA</p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-envelope-o fa-2x text-brand-green mb-4"></i>
+                        <p class="text-white font-semibold mb-2">Email:</p>
+                        <p class="text-gray-300">
+                            <a href="mailto:john.humble10@gmail.com" class="hover:text-brand-green">john.humble10@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <div>
+                        <i class="fab fa-facebook fa-2x text-brand-green mb-4"></i>
+                        <p class="text-white font-semibold mb-2">Facebook:</p>
+                        <p class="text-gray-300">
+                            <a href="https://facebook.com/JohnHumbleSolicitor" class="hover:text-brand-green">/JohnHumbleSolicitor</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-light-gray py-6 text-center text-gray-500">
+            <img src="/img/logo.png" alt="John Humble Solicitor" class="w-20 mx-auto mb-2">
+            <p>&copy; 2025 - John Humble Solicitor</p>
+        </div>
+    </footer>
+</body>
+</html>

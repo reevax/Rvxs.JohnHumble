@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main class="pt-20">
+    <section class="py-16 lg:py-20">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <header class="text-center mb-12">
+                <h2 class="font-quicksand text-3xl lg:text-4xl mb-6">{{ .Title }}</h2>
+            </header>
+            <hr class="border-gray-300 mb-6 mx-auto">
+
+            <div class="space-y-4">
+            {{ range .Pages }}
+            <article>
+                <a href="{{ .Permalink }}" class="space-y-2">
+                    <h3 class="text-2xl font-quicksand">{{ .Title }}</h3>
+                    <p class="font-quicksand text-lg leading-relaxed">{{ .Summary }}</p>
+                    <p class="font-quicksand text-sm text-brand-green">Read more...</p>
+                </a>
+            </article>
+            {{ end }}
+            </div>
+        </div>
+    </section>
+</main>
+{{ end }}
